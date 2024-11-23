@@ -1,0 +1,21 @@
+{
+  "name": "admin-seed",
+  "version": "1.0.0",
+  "description": "Script to create an admin user in the database",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Seif Megahed",
+    "url": "https://github.com/seifmegahed"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.4.5",
+    "pg": "^8.12.0"
+  }
+}

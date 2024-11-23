@@ -9,6 +9,7 @@
     "url": "https://github.com/seifmegahed"
   },
   "scripts": {
+    "admin:seed": "node admin-seed/index.mjs",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "drizzle-kit migrate",
     "db:push": "drizzle-kit push",

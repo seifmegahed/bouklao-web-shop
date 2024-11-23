@@ -18,8 +18,7 @@ const conn = globalForDb.conn ?? postgres(env.DATABASE_URL);
 if (env.NODE_ENV !== "production") globalForDb.conn = conn;
 
 export const db = env.LOCAL_DB
-  ? vercelDrizzle(sql, { schema })
-  : drizzle(
+  ? drizzle(
       /**
        *  Mocking DB connection in test env
        *  Waiting for drizzle >= 0.35.0 to be LTS
@@ -33,4 +32,5 @@ export const db = env.LOCAL_DB
       {
         schema,
       },
-    );
+    )
+  : vercelDrizzle(sql, { schema });
