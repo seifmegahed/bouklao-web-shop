@@ -10,7 +10,7 @@ export const adminTable = pgTable("admin", {
   lastLogin: timestamp("last_login", { withTimezone: true }),
   lastIp: varchar("last_ip", { length: 256 }),
 
-  failedLoginAttempts: serial("failed_login_attempts").notNull(),
+  failedLoginAttempts: serial("failed_login_attempts").default(0).notNull(),
   blockedUntil: timestamp("blocked_until", { withTimezone: true }),
 
   createdAt: timestamp("created_at", { withTimezone: true })
